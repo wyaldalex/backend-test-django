@@ -86,7 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'dvdrental',
         'USER': 'postgres',
-        'PASSWORD': '123desk',
+        'PASSWORD': os.environ.get("DB_PWD"),
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
