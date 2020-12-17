@@ -31,8 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -131,7 +131,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-DATABASE_ROUTERS = ['core.routers.CoreDBRouter',]
+DATABASE_ROUTERS = ['core.routers.CoreDBRouter', 'backend.routers.DefaultDBRouter']
 
 CORS_ORIGIN_WHITELIST = [
     'https://localhost:3000'

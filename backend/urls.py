@@ -26,5 +26,6 @@ router.register(r'testviews', views.TestView, 'testone')
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'test', views.TestView.as_view()),
+    url(r'api/stats/', views.MeanMedianView.as_view(), name = "mean-median"),
     path('api/', include(router.urls)),
 ]

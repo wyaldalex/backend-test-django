@@ -1,15 +1,15 @@
-class CoreDBRouter:
+class DefaultDBRouter:
     def db_for_read(self, model, **hints):
         """
-        Reads from core.
+        Reads from default.
         """
-        return 'core'
+        return 'default'
 
     def db_for_write(self, model, **hints):
         """
-        Writes always go to core.
+        Writes always go to default.
         """
-        return 'core'
+        return 'default'
 
     def allow_relation(self, obj1, obj2, **hints):
 
@@ -20,4 +20,4 @@ class CoreDBRouter:
         """
         All non-auth models end up in this pool.
         """
-        return False
+        return True
